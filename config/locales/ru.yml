@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    models:
+      spree/attached_file: "Прикрепленнй файл"
+    attributes:
+      spree/attached_file:
+          name: "Имя"
+          attachment: "Файл"
+
+  spree_attached_files:
+    config_name: "Прикрепленные файлы"
+    config_description: "Управление прикрепленными файлами"
+    title: "Прикрепленные файлы"
+    new_attached_file: "Добавить файл"
+    editing_attached_file: "Редактировать файл"

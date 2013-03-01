@@ -1,5 +1,15 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      spree/attached_file: "Attached File"
+    attributes:
+      spree/attached_file:
+        name: "Name"
+        attachment: "Attachment"
+
+  spree_attached_files:
+    config_name: "Attached Files"
+    config_description: "Manage uploaded files"
+    title: "Attached Files"
+    new_attached_file: "New Attached File"
+    editing_attached_file: "Editing Attached File"

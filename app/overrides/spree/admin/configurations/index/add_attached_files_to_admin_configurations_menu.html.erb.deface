@@ -1,0 +1,5 @@
+<!-- insert_bottom "[data-hook='admin_configurations_menu']" -->
+<tr>
+  <td><%= link_to t('spree_attached_files.config_name'), admin_attached_files_path %></td>
+  <td><%= t('spree_attached_files.config_description') %></td>
+</tr>

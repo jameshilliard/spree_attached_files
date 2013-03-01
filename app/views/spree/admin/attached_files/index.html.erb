@@ -1,0 +1,37 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions">
+    <li>
+      <p>
+        <%= button_link_to t('spree_attached_files.new_attached_file'), new_object_url, :icon => 'add', :id => 'admin_new_attached_file_link' %>
+      </p>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1><%= t('spree_attached_files.title') %></h1>
+
+<table class="index" id="listing_attached_files" data-hook>
+  <thead>
+    <tr data-hook="admin_attached_files_index_headers">
+      <th><%= t(:name) %></th>
+      <th><%= t(:path) %></th>
+      <th data-hook="admin_attached_files_index_header_actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @attached_files.each do |attached_file|%>
+      <tr id="<%= dom_id attached_file %>" data-hook="admin_attached_files_index_rows">
+        <td><%=link_to attached_file.name, object_url(attached_file) %></td>
+        <td><%=link_to attached_file.attachment.url, attached_file.attachment.url %></td>
+        <td data-hook="admin_attached_files_index_row_actions">
+          <%= link_to_edit attached_file, :class => 'edit' %> &nbsp;
+          <%= link_to_delete attached_file %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

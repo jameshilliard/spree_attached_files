@@ -1,0 +1,8 @@
+<%= f.field_container :name do %>
+  <%= f.label :name, t(:name) %><br />
+  <%= f.text_field :name %>
+<% end %>
+<%= f.field_container :file do %>
+  <%= f.label :attachment %><br />
+  <%= f.file_field :attachment %>
+<% end %>

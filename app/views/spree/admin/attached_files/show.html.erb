@@ -1,0 +1,35 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t(:attached_file) %></h1>
+
+<table>
+  <tr data-hook="name">
+    <th><%= t(:name) %></th>
+    <td>
+      <%= @attached_file.name %>
+    </td>
+  </tr>
+  <tr data-hook="attachment_file_name">
+    <th><%= t(:attachment_file_name) %></th>
+    <td>
+      <%= @attached_file.attachment_file_name %>
+    </td>
+  </tr>
+  <tr data-hook="attachment_link">
+    <th><%= t(:attachment_link) %></th>
+    <td>
+      <%= link_to @attached_file.attachment.url, @attached_file.attachment.url %>
+    </td>
+  </tr>
+</table>
+
+<% if @attached_file.attachment.content_type.split(?/).first == 'image' %>
+  <%= image_tag @attached_file.attachment, style: 'max-width: 400px;'%>
+<% end %>
+
+<br />
+
+<p>
+  <%= link_to_edit @attached_file, :class => 'edit_attached_file' %> <%= t(:or) %>
+  <%= link_to t(:back), collection_url %>
+</p>
